@@ -1,23 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
-<loc>https://infogulch.github.io/index/markdown/2020/01/14/test-markdown-post.html</loc>
-<lastmod>2020-01-14T00:00:00-06:00</lastmod>
-</url>
-<url>
-<loc>https://infogulch.github.io/index/jupyter/2020/02/20/test.html</loc>
+<loc>https://blog.infogulch.com/jupyter/2020/02/20/test.html</loc>
 <lastmod>2020-02-20T00:00:00-06:00</lastmod>
 </url>
 <url>
-<loc>https://infogulch.github.io/index/about/</loc>
+<loc>https://blog.infogulch.com/2021/07/07/Merklist.html</loc>
+<lastmod>2021-07-07T00:00:00-05:00</lastmod>
 </url>
 <url>
-<loc>https://infogulch.github.io/index/</loc>
+<loc>https://blog.infogulch.com/about/</loc>
 </url>
 <url>
-<loc>https://infogulch.github.io/index/search/</loc>
+<loc>https://blog.infogulch.com/</loc>
 </url>
 <url>
-<loc>https://infogulch.github.io/index/categories/</loc>
+<loc>https://blog.infogulch.com/search/</loc>
+</url>
+<url>
+<loc>https://blog.infogulch.com/categories/</loc>
 </url>
 </urlset>

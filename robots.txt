@@ -1,1 +1,1 @@
-Sitemap: https://infogulch.github.io/index/sitemap.xml
+Sitemap: https://blog.infogulch.com/sitemap.xml
