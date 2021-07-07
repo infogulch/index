@@ -77,7 +77,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      14 min read
+      15 min read
     
 </span></p>
 
@@ -117,6 +117,13 @@ window.onload = wrap_img;
 
 <div class="container" id="notebook-container">
         
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Using matrix multiplication's associativity and non-commutativity properties provides a natural definition of a cryptographic hash / digest / summary of an ordered list of elements. Due to the non-commutativity property, lists that only differ in element order result in a different summary. Due to the associativity property, arbitrarily divided adjacent sub-lists can be summarized independently and combined to quickly find the summary of their concatenation. This definition provides exactly the properties needed to define a list, and does not impose any unnecessary structure that could cause two equivalent lists to produce different summaries. The name <em>Merklist</em> is intended to be reminicent of other hash-based data structures like <a href="https://en.wikipedia.org/wiki/Merkle_tree">Merkle Tree</a> and <a href="https://www.deadalnix.me/2016/09/24/introducing-merklix-tree-as-an-unordered-merkle-tree-on-steroid/">Merklix Tree</a>.</p>
+
+</div>
+</div>
+</div>
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="Definition">Definition<a class="anchor-link" href="#Definition"> </a></h2><p>This definition of a hash of a list of elements is pretty simple:</p>
