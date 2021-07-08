@@ -1,8 +1,5 @@
 name: Pull notebook subtree
-on:
-  repository_dispatch:
-    types:
-      - webhook
+on: [repository_dispatch]
 
 jobs:
   pull-notebook-subtree:
