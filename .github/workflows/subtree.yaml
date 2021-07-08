@@ -11,6 +11,9 @@ jobs:
     steps:
         - uses: actions/checkout@v2
 
+        - name: debug
+          run: pwd; ls -la
+
         - name: Pull from subtree
           run: git subtree pull --prefix=_notebooks https://github.com/infogulch/notebooks.git master -m "Update notebooks subtree"
 
