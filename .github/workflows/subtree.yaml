@@ -1,0 +1,17 @@
+on:
+  repository_dispatch:
+    types:
+      - webhook
+
+#
+
+jobs:
+  pull-notebook-subtree:
+
+    runs-on: ubuntu-latest
+
+    steps:
+        - uses: actions/checkout@v2
+
+        - name: Pull from subtree
+          run: git subtree pull --prefix=_notebooks 
