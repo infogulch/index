@@ -3,8 +3,6 @@ on:
     types:
       - webhook
 
-#
-
 jobs:
   pull-notebook-subtree:
 
@@ -14,4 +12,8 @@ jobs:
         - uses: actions/checkout@v2
 
         - name: Pull from subtree
-          run: git subtree pull --prefix=_notebooks 
+          run: git subtree pull --prefix=_notebooks https://github.com/infogulch/notebook.git master -m "Update notebooks subtree"
+
+        - name: Push subtree changes
+          run: git push
+
