@@ -1,5 +1,7 @@
-name: Pull notebook subtree
-on: [repository_dispatch]
+name: Pull notebooks repo subtree
+on: 
+  repository_dispatch:
+    types: [notebooks_push]
 
 jobs:
   pull-notebook-subtree:
@@ -10,7 +12,7 @@ jobs:
         - uses: actions/checkout@v2
 
         - name: Pull from subtree
-          run: git subtree pull --prefix=_notebooks https://github.com/infogulch/notebook.git master -m "Update notebooks subtree"
+          run: git subtree pull --prefix=_notebooks https://github.com/infogulch/notebooks.git master -m "Update notebooks subtree"
 
         - name: Push subtree changes
           run: git push
