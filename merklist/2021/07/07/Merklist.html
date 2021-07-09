@@ -93,7 +93,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      16 min read
+      15 min read
     
 </span></p>
 
@@ -255,7 +255,7 @@ window.onload = wrap_img;
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>8×8 seems big compared to 3×3 or 4×4 matrixes. The values are as random as you might expect a cryptographic hash to be, and range from 0-255:</p>
+<p>Lets see it in use:</p>
 
 </div>
 </div>
@@ -263,9 +263,6 @@ window.onload = wrap_img;
     
     
 <div class="cell border-box-sizing code_cell rendered">
-<details class="description">
-      <summary class="btn btn-sm" data-open="Hide Code" data-close="Show Code"></summary>
-        <p></p>
 <div class="input">
 
 <div class="inner_cell">
@@ -279,7 +276,6 @@ window.onload = wrap_img;
 </div>
 </div>
 
-    </details>
 <div class="output_wrapper">
 <div class="output">
 
@@ -313,6 +309,14 @@ window.onload = wrap_img;
 </div>
     
 
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>8×8 seems big compared to 3×3 or 4×4 matrixes, but otherwise everything looks normal. The values are as random as you might expect a cryptographic hash to be, and range from 0-255.</p>
+
+</div>
+</div>
+</div>
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -365,7 +369,7 @@ window.onload = wrap_img;
 <span class="n">list_hash1</span> <span class="o">=</span> <span class="n">mul_m</span><span class="p">(</span><span class="n">mul_m</span><span class="p">(</span><span class="n">element_hashes</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">element_hashes</span><span class="p">[</span><span class="mi">1</span><span class="p">]),</span> <span class="n">element_hashes</span><span class="p">[</span><span class="mi">2</span><span class="p">])</span>
 <span class="c1"># an alternative way to write the reduction</span>
 <span class="n">list_hash2</span> <span class="o">=</span> <span class="n">reduce</span><span class="p">(</span><span class="n">mul_m</span><span class="p">,</span> <span class="n">element_hashes</span><span class="p">)</span>
-<span class="c1"># check that these alternative spellings are equivalent</span>
+<span class="c1"># check that these are equivalent</span>
 <span class="n">assert_equal</span><span class="p">(</span><span class="n">list_hash1</span><span class="p">,</span> <span class="n">list_hash2</span><span class="p">)</span>
 </pre></div>
 
@@ -376,43 +380,25 @@ window.onload = wrap_img;
 </div>
     
 
-<div class="cell border-box-sizing text_cell rendered">
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<blockquote>
-<p>Expand the sections below to see a comparison</p>
-</blockquote>
-
-</div>
-</div>
-</div>
     
     
 <div class="cell border-box-sizing code_cell rendered">
-<details class="description">
-      <summary class="btn btn-sm" data-open="Hide Code" data-close="Show Code"></summary>
-        <p></p>
 <div class="input">
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#collapse-output</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">"List of elements:"</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">elements</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">()</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">"Hash of each element:"</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">element_hashes</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">()</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">"Hash of full list:"</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">list_hash1</span><span class="p">)</span>
-<span class="c1"># Expand the section below to see the output</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">"List of elements:</span><span class="se">\n</span><span class="s2">"</span><span class="p">,</span> <span class="n">elements</span><span class="p">,</span> <span class="s2">"</span><span class="se">\n</span><span class="s2">"</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"List of element hashes:</span><span class="se">\n</span><span class="s2">"</span><span class="p">,</span> <span class="n">element_hashes</span><span class="p">,</span> <span class="s2">"</span><span class="se">\n</span><span class="s2">"</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"Merklist hash of the list"</span><span class="p">,</span> <span class="n">elements</span><span class="p">,</span> <span class="s2">":</span><span class="se">\n</span><span class="s2">"</span><span class="p">,</span> <span class="n">list_hash1</span><span class="p">,</span> <span class="s2">"</span><span class="se">\n</span><span class="s2">"</span><span class="p">)</span>
 </pre></div>
 
     </div>
 </div>
 </div>
-
-    </details>
+<details class="description">
+      <summary class="btn btn-sm" data-open="Hide Output" data-close="Show Output"></summary>
+        <p>
+</p>
 <div class="output_wrapper">
 <div class="output">
 
@@ -420,10 +406,10 @@ window.onload = wrap_img;
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>List of elements:
-[b'A', b'Hello', b'World']
+ [b'A', b'Hello', b'World'] 
 
-Hash of each element:
-[array([[ 33, 180, 244, 189, 158, 100, 237,  53],
+List of element hashes:
+ [array([[ 33, 180, 244, 189, 158, 100, 237,  53],
        [ 92,  62, 182, 118, 162, 142, 190, 218],
        [246, 216, 241, 123, 220,  54,  89, 149],
        [179,  25,   9, 113,  83,   4,  64, 128],
@@ -444,17 +430,18 @@ Hash of each element:
        [187, 104,  46, 253, 214, 197, 221,  19],
        [193,  23, 224, 139, 212, 170, 239, 113],
        [ 41,  29, 138, 172, 226, 248, 144,  39],
-       [ 48, 129, 208, 103, 124,  22, 223,  15]], dtype=uint8)]
+       [ 48, 129, 208, 103, 124,  22, 223,  15]], dtype=uint8)] 
 
-Hash of full list:
-[[178 188  57 157  60 136 190 127]
+Merklist hash of the list [b'A', b'Hello', b'World'] :
+ [[178 188  57 157  60 136 190 127]
  [ 40 234 254 224  38  46 250  52]
  [156  72 193 136 219  98  28   4]
  [197   2  43 132 132 232 254 198]
  [ 93  64 113 215   2 246 130 192]
  [ 91 107  85  13 149  60  19 173]
  [ 84  77 244  98   0 239 123  17]
- [ 58 112  98 250 163  20  27   6]]
+ [ 58 112  98 250 163  20  27   6]] 
+
 </pre>
 </div>
 </div>
@@ -462,6 +449,7 @@ Hash of full list:
 </div>
 </div>
 
+    </details>
 </div>
     
 
@@ -518,18 +506,7 @@ Hash of full list:
 </tbody>
 </table>
 <p>Upon consideration, these are the exact properties that one would want in order to define the hash of a list of items. Non-commutativity enables the order of elements in the list to be well defined, since swapping different elements produces a different hash. Associativity enables calculating the hash of the list by performing the reduction operations in any order, and you still get the same hash.</p>
-<p>Lets sanity-check that these properties can hold for the construction described above.</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Associativity">
-<a class="anchor" href="#Associativity" aria-hidden="true"><span class="octicon octicon-link"></span></a>Associativity<a class="anchor-link" href="#Associativity"> </a>
-</h3>
-<p>If it's associative, we should get the same hash if we rearrange the parenthesis to indicate reduction in a different operation order. That is: $((e1 × e2) × e3) = (e1 × (e2 × e3))$</p>
+<p>Lets sanity-check that these properties can hold for the construction described above. For setup, lets consider the hashes of three elements, $he_1$, $he_2$, and $he_3$:</p>
 
 </div>
 </div>
@@ -541,9 +518,9 @@ Hash of full list:
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">e1</span> <span class="o">=</span> <span class="n">hash_m</span><span class="p">(</span><span class="sa">b</span><span class="s2">"Hello A"</span><span class="p">)</span>
-<span class="n">e2</span> <span class="o">=</span> <span class="n">hash_m</span><span class="p">(</span><span class="sa">b</span><span class="s2">"Hello B"</span><span class="p">)</span>
-<span class="n">e3</span> <span class="o">=</span> <span class="n">hash_m</span><span class="p">(</span><span class="sa">b</span><span class="s2">"Hello C"</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">he1</span> <span class="o">=</span> <span class="n">hash_m</span><span class="p">(</span><span class="sa">b</span><span class="s2">"A"</span><span class="p">)</span>
+<span class="n">he2</span> <span class="o">=</span> <span class="n">hash_m</span><span class="p">(</span><span class="sa">b</span><span class="s2">"B"</span><span class="p">)</span>
+<span class="n">he3</span> <span class="o">=</span> <span class="n">hash_m</span><span class="p">(</span><span class="sa">b</span><span class="s2">"C"</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -553,6 +530,17 @@ Hash of full list:
 </div>
     
 
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Associativity">
+<a class="anchor" href="#Associativity" aria-hidden="true"><span class="octicon octicon-link"></span></a>Associativity<a class="anchor-link" href="#Associativity"> </a>
+</h3>
+<p>If it's associative, we should get the same hash if we rearrange the parenthesis to indicate reduction in a different operation order. $((he_1 × he_2) × he_3) = (he_1 × (he_2 × he_3))$</p>
+
+</div>
+</div>
+</div>
     
     
 <div class="cell border-box-sizing code_cell rendered">
@@ -560,8 +548,8 @@ Hash of full list:
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">matmul</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">matmul</span><span class="p">(</span><span class="n">e1</span><span class="p">,</span> <span class="n">e2</span><span class="p">),</span> <span class="n">e3</span><span class="p">)</span>
-<span class="n">y</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">matmul</span><span class="p">(</span><span class="n">e1</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">matmul</span><span class="p">(</span><span class="n">e2</span><span class="p">,</span> <span class="n">e3</span><span class="p">))</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">matmul</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">matmul</span><span class="p">(</span><span class="n">he1</span><span class="p">,</span> <span class="n">he2</span><span class="p">),</span> <span class="n">he3</span><span class="p">)</span>
+<span class="n">y</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">matmul</span><span class="p">(</span><span class="n">he1</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">matmul</span><span class="p">(</span><span class="n">he2</span><span class="p">,</span> <span class="n">he3</span><span class="p">))</span>
 
 <span class="c1"># observe that they produce the same summary</span>
 <span class="n">assert_equal</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
@@ -574,60 +562,46 @@ Hash of full list:
 </div>
     
 
-<div class="cell border-box-sizing text_cell rendered">
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<blockquote>
-<p>Expand the sections below to see a comparison</p>
-</blockquote>
-
-</div>
-</div>
-</div>
     
     
 <div class="cell border-box-sizing code_cell rendered">
-<details class="description">
-      <summary class="btn btn-sm" data-open="Hide Code" data-close="Show Code"></summary>
-        <p></p>
 <div class="input">
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#collapse-output</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">()</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">y</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="s2">"</span><span class="se">\n\n</span><span class="s2">"</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
 </pre></div>
 
     </div>
 </div>
 </div>
-
-    </details>
+<details class="description">
+      <summary class="btn btn-sm" data-open="Hide Output" data-close="Show Output"></summary>
+        <p>
+</p>
 <div class="output_wrapper">
 <div class="output">
 
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>[[ 58  12 144 134 100 158 159  51]
- [ 73 206 202 190  87  79 223   2]
- [210 122 142 117  37 148 106  45]
- [175 146 187 223 235 171  64 226]
- [149  85 203  87  92 251 243 206]
- [ 18 252 160 103 125 251 181 133]
- [191 132 220 104 213 154  34 154]
- [127 197  95  87 166   3  22   3]]
+<pre>[[236 186 154 122 127 118 202  95]
+ [132 196 196  78  80 160  68 166]
+ [208  62 184 219  85 118 143 111]
+ [  7 176 219 162 243  25  29  54]
+ [233  49  39 237 233 209 201 221]
+ [187 196  20 155  17 241 207 101]
+ [132 186  67 153 231 160  68  62]
+ [  8 184 160 149 100 160 189  56]] 
 
-[[ 58  12 144 134 100 158 159  51]
- [ 73 206 202 190  87  79 223   2]
- [210 122 142 117  37 148 106  45]
- [175 146 187 223 235 171  64 226]
- [149  85 203  87  92 251 243 206]
- [ 18 252 160 103 125 251 181 133]
- [191 132 220 104 213 154  34 154]
- [127 197  95  87 166   3  22   3]]
+ [[236 186 154 122 127 118 202  95]
+ [132 196 196  78  80 160  68 166]
+ [208  62 184 219  85 118 143 111]
+ [  7 176 219 162 243  25  29  54]
+ [233  49  39 237 233 209 201 221]
+ [187 196  20 155  17 241 207 101]
+ [132 186  67 153 231 160  68  62]
+ [  8 184 160 149 100 160 189  56]]
 </pre>
 </div>
 </div>
@@ -635,6 +609,7 @@ Hash of full list:
 </div>
 </div>
 
+    </details>
 </div>
     
 
@@ -644,7 +619,7 @@ Hash of full list:
 <h3 id="Non-Commutativity">
 <a class="anchor" href="#Non-Commutativity" aria-hidden="true"><span class="octicon octicon-link"></span></a>Non-Commutativity<a class="anchor-link" href="#Non-Commutativity"> </a>
 </h3>
-<p>If it's not commutative, then swapping different elements should produce a different hash. That is, $e1 × e2 \ne e2 × e1$:</p>
+<p>If it's not commutative, then swapping different elements should produce a different hash. That is, $he_1 × he_2 \ne he_2 × he_1$:</p>
 
 </div>
 </div>
@@ -656,8 +631,8 @@ Hash of full list:
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">matmul</span><span class="p">(</span><span class="n">e1</span><span class="p">,</span> <span class="n">e2</span><span class="p">)</span>
-<span class="n">y</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">matmul</span><span class="p">(</span><span class="n">e2</span><span class="p">,</span> <span class="n">e1</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">matmul</span><span class="p">(</span><span class="n">he1</span><span class="p">,</span> <span class="n">he2</span><span class="p">)</span>
+<span class="n">y</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">matmul</span><span class="p">(</span><span class="n">he2</span><span class="p">,</span> <span class="n">he1</span><span class="p">)</span>
 
 <span class="c1"># observe that they produce different summaries</span>
 <span class="n">assert_not_equal</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
@@ -670,60 +645,46 @@ Hash of full list:
 </div>
     
 
-<div class="cell border-box-sizing text_cell rendered">
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<blockquote>
-<p>Expand the sections below to see a comparison</p>
-</blockquote>
-
-</div>
-</div>
-</div>
     
     
 <div class="cell border-box-sizing code_cell rendered">
-<details class="description">
-      <summary class="btn btn-sm" data-open="Hide Code" data-close="Show Code"></summary>
-        <p></p>
 <div class="input">
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#collapse-output</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">()</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">y</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="s2">"</span><span class="se">\n\n</span><span class="s2">"</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
 </pre></div>
 
     </div>
 </div>
 </div>
-
-    </details>
+<details class="description">
+      <summary class="btn btn-sm" data-open="Hide Output" data-close="Show Output"></summary>
+        <p>
+</p>
 <div class="output_wrapper">
 <div class="output">
 
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>[[ 87  79 149 131 148 247 195  90]
- [249  84 195  58 142 133 211  15]
- [177  93  69 254 240 234  97  37]
- [ 46  84  76 253  55 200  43 236]
- [ 21  84  99 157  55 148 170   2]
- [168 123   6 250  64 144  54 242]
- [230  78 164  76  30  29 214  68]
- [ 47 183 156 239 157 177 192 184]]
+<pre>[[  3 123 188 218 224 245 207 138]
+ [  6 234 158 180 156  14 148 118]
+ [  1 224 198 114 201 102 144 157]
+ [ 11 141 205  36 186 218  16  40]
+ [ 76 243 130  82 188 146 230  84]
+ [211  24   6  46  87 234  89 206]
+ [ 16 239 112  27  11 202 139 137]
+ [103  30  53 187 203 140  26 146]] 
 
-[[149  18 239 238  84 188 191 109]
- [239 150 214 235  59 161   9 133]
- [ 89 174  59  14  70 113 124 243]
- [ 66 113 176 124 227 247  17  25]
- [247 138 152 181 177 143 184  97]
- [113 249 199 153 154  75  45 105]
- [121 201 225  42 249 213 180 244]
- [ 85  31  72  28 181 182 140 176]]
+ [[253 223  41 178 183 140 102  18]
+ [111 185  54 143 153  96 117  15]
+ [109 111 168 203 253   0 102  84]
+ [106  74 245 252 178 202 226 201]
+ [ 12 105  29 102 167 152 161 226]
+ [253 244  27 149 227 247 235  21]
+ [121  15  36   5   9  32  10  92]
+ [ 42 189  91 117 135 176  52 152]]
 </pre>
 </div>
 </div>
@@ -731,6 +692,7 @@ Hash of full list:
 </div>
 </div>
 
+    </details>
 </div>
     
 
@@ -809,9 +771,7 @@ Hash of full list:
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">hash1</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">()</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">hash2</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">hash1</span><span class="p">,</span> <span class="s2">"</span><span class="se">\n\n</span><span class="s2">"</span><span class="p">,</span> <span class="n">hash2</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -831,9 +791,9 @@ Hash of full list:
  [ 19 135  80 115  75 242 242   5]
  [244 165 250  28  76  43 188 254]
  [233  46 187  39 151 241 175 130]
- [132 138   6 215  20 132  89  33]]
+ [132 138   6 215  20 132  89  33]] 
 
-[[ 68 252 159   3  14  52 199 199]
+ [[ 68 252 159   3  14  52 199 199]
  [136 124   6  34  58 174 206  54]
  [  3 234   2  13 120 240   7 163]
  [102  47  66  61  87 234 246  72]
